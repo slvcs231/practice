@@ -6,7 +6,7 @@ if [ $USERID -ne 0 ]; then
    echo "ERROR:: Please execute script with root previlige"
 fi
 
-yum install mysql -y
+sudo dnf install mysql -y
 if [ $? -ne 0 ]; then
     echo "ERROR:: Installing MYSQL is failure"
 else
