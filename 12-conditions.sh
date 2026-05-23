@@ -1,0 +1,14 @@
+#!/bin/bash
+
+USERID=$(id -u)
+
+if [ $USERID -ne 0 ]; then
+   echo "ERROR:: Please execute script with root previlige"
+
+dnf install mysql -y
+
+if [ $? -ne 0 ]; then
+    echo "ERROR:: Installing MYSQL is failur"
+else
+    echo "Mysql installation is success"
+fi
